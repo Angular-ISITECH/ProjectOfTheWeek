@@ -1,27 +1,30 @@
 # ProjectOfTheWeek
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Consignes pour le rendu du projet Angular :
+>- Creer un depot git sur github
+>
+>- Creation d'une application type ponyRacer https://ng-ponyracer.ninja-squad.com/, vous pouvez vous inscrire et tester l'application pour voir le résultat final.
+>
+>- L'application doit comporter au moins 2 pages, une page de login et une page de course
+>
+>- La page de login doit comporter un formulaire de connexion avec un champ username et un champ password
+>
+>- La page de course doit comporter un formulaire de création de course avec un champ name et un champ location
+>
+>- La page de course doit comporter une liste de course avec un bouton pour supprimer une course
+>
+>- La page de course doit comporter un bouton pour se déconnecter
+>
+>- Vous devez utiliser le service de gestion des courses pour récupérer la liste des courses et supprimer une course
+>
+>- Vous devez utiliser le service de gestion des utilisateurs pour vous connecter et vous déconnecter
+>
+>- Vous devez utiliser le service de gestion des utilisateurs pour vérifier que l'utilisateur est connecté avant d'afficher la page de course
+>
+>- Vous devez utiliser le service de gestion des utilisateurs pour vérifier que l'utilisateur est connecté avant de supprimer une course
+>
+>- Vous devez utiliser le service de gestion des utilisateurs pour vérifier que l'utilisateur est connecté avant de se déconnecter
+>
+>- Vous devez utiliser le service de gestion des utilisateurs pour vérifier que l'utilisateur est connecté avant de créer une course
+>
+>- Vous devez utiliser le service de gestion des utilisateurs pour vérifier que l'utilisateur est connecté avant d'afficher la page de login
