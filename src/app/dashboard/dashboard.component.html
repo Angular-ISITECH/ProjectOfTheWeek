@@ -1,1 +1,22 @@
-<p>dashboard works!</p>
+<app-navbar></app-navbar>
+<main class="mt-16 py-3 px-5">
+  <div class="flex flex-col gap-3">
+    <h1 class="text-3xl">
+      Prochaines courses
+    </h1>
+    <div *ngIf="getUpcomingRaces().length" class="flex flex-col gap-3">
+      <div *ngFor="let race of getUpcomingRaces()" class="rounded border shadow grid grid-cols-2 py-3 px-4">
+        <div class="my-auto">{{race.name | CustomCapitalize}}</div>
+        <div class="my-auto ml-auto">{{race.date | CustomDateText}}</div>
+      </div>
+    </div>
+    <div *ngIf="!getUpcomingRaces().length">
+      <div class="flex flex-col gap-3">
+        <div class="rounded drop-shadow-md flex justify-between">
+          <div class="my-auto">Aucune course à venir</div>
+          <div class="my-auto"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

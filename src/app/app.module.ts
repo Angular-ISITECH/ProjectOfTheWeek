@@ -11,6 +11,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import {AuthService} from "./auth/auth.service";
 import {AuthGuardService} from "./auth/auth-guard.service";
 import {JWT_OPTIONS, JwtHelperService} from "@auth0/angular-jwt";
+import {ReactiveFormsModule} from "@angular/forms";
+import { NavbarComponent } from './navbar/navbar.component';
+import {CustomCapitalize} from "./pipes/custom-capitalize.pipe";
+import {CustomDateText} from "./pipes/custom-date-text.pipe";
 
 @NgModule({
   declarations: [
@@ -19,11 +23,15 @@ import {JWT_OPTIONS, JwtHelperService} from "@auth0/angular-jwt";
     LoginComponent,
     RegisterComponent,
     RacesComponent,
-    DashboardComponent
+    DashboardComponent,
+    NavbarComponent,
+    CustomCapitalize,
+    CustomDateText,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [AuthService, AuthGuardService, JwtHelperService, { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },],
   bootstrap: [AppComponent]
