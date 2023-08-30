@@ -11,10 +11,12 @@ export class DashboardComponent {
   constructor(private racesData: RacesDataService) {}
 
   public getUpcomingRaces(): any[] {
+    //only future races sort by date and limit to 3 and use only date and name properties
     return this.racesData.getRacesData()
+      .map(race => ({ date: race.date, name: race.name }))
       .filter(race => race.date.getTime() > new Date().getTime())
       .sort((a, b) => a.date.getTime() - b.date.getTime())
-      .slice(0, 3);
+      .slice(0, 3)
   }
 
   protected readonly CustomCapitalize = CustomCapitalize;

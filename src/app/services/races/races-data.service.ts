@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 interface Race {
   name: string;
-  ponies: { name: string }[];
+  ponies: { name: string, winner?: boolean }[];
   date: Date;
 }
 
@@ -16,30 +16,37 @@ export class RacesDataService {
       ponies: [
         {
           name: 'Gentle Pie',
+          winner: true,
         },
         {
           name: 'Big Soda',
+          winner: false,
         },
         {
           name: 'Gentle Bottle',
+          winner: false,
         }
       ],
-      date: new Date('2023-09-02'),
+      date: new Date('2023-08-29'),
     },
     {
       name: 'Grand prix de Lyon',
       ponies: [
         {
           name: 'Gentle Pie',
+          winner: false,
         },
         {
           name: 'Big Soda',
+          winner: false,
         },
         {
           name: 'Gentle Bottle',
+          winner: false,
         },
         {
           name: 'Superb Whiskey',
+          winner: false,
         }
       ],
       date: new Date('2023-09-04'),
@@ -49,18 +56,23 @@ export class RacesDataService {
       ponies: [
         {
           name: 'Fast Rainbow',
+          winner: false,
         },
         {
           name: 'Little Tornado',
+          winner: false,
         },
         {
           name: 'Stormy Rainbow',
+          winner: false,
         },
         {
           name: 'Magic Rainbow',
+          winner: false,
         },
         {
           name: 'Superb Whiskey',
+          winner: false,
         }
       ],
       date: new Date('2023-09-11'),
@@ -70,15 +82,19 @@ export class RacesDataService {
       ponies: [
         {
           name: 'Big Soda',
+          winner: false,
         },
         {
           name: 'Mystic Rainbow',
+          winner: false,
         },
         {
           name: 'Magic Rainbow',
+          winner: false,
         },
         {
           name: 'Superb Whiskey',
+          winner: false,
         }
       ],
       date: new Date('2023-09-23'),
@@ -88,15 +104,19 @@ export class RacesDataService {
       ponies: [
         {
           name: 'Gentle Pie',
+          winner: false,
         },
         {
           name: 'Little Tornado',
+          winner: false,
         },
         {
           name: 'Superb Whiskey',
+          winner: false,
         },
         {
           name: 'Fast Rainbow',
+          winner: false,
         }
       ],
       date: new Date('2023-09-30'),
@@ -105,5 +125,9 @@ export class RacesDataService {
 
   getRacesData(): any[] {
     return this.racesData;
+  }
+
+  deleteRace(id: number): void {
+    this.racesData.splice(id, 1);
   }
 }

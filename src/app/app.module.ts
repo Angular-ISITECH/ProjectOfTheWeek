@@ -15,6 +15,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import { NavbarComponent } from './navbar/navbar.component';
 import {CustomCapitalize} from "./pipes/custom-capitalize.pipe";
 import {CustomDateText} from "./pipes/custom-date-text.pipe";
+import {CustomDate} from "./pipes/custom-date.pipe";
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {CustomDateText} from "./pipes/custom-date-text.pipe";
     NavbarComponent,
     CustomCapitalize,
     CustomDateText,
+    CustomDate,
   ],
   imports: [
     BrowserModule,
