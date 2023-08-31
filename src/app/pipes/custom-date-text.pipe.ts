@@ -9,7 +9,7 @@ export class CustomDateText implements PipeTransform {
     const month = value.getMonth();
     const day = value.getDate();
     const year = value.getFullYear();
-    const listMonth = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout","Septembre", "Octobre", "Novembre", "Décembre"];
+    const listMonth = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août","Septembre", "Octobre", "Novembre", "Décembre"];
     const monthText = listMonth[month];
 
     return day + " " + monthText + " " + year;

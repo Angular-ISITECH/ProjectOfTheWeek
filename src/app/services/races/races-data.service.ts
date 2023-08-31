@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 interface Race {
   name: string;
-  ponies: { name: string, winner?: boolean }[];
+  ponies?: { name: string, winner?: boolean }[];
   date: Date;
 }
 
@@ -129,5 +129,13 @@ export class RacesDataService {
 
   deleteRace(id: number): void {
     this.racesData.splice(id, 1);
+  }
+
+  addRace(raceData: { name: string, date: Date, ponies: [] }): void {
+    this.racesData.push({
+      name: raceData.name,
+      date: raceData.date,
+      ponies: raceData.ponies,
+    });
   }
 }
