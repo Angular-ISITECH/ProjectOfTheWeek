@@ -1,17 +1,36 @@
 # ProjectOfTheWeek
 
-## Consignes pour le rendu du projet Angular :
->- Creer un depot git sur github
->- Creation d'une application type ponyRacer https://ng-ponyracer.ninja-squad.com/, vous pouvez vous inscrire et tester l'application pour voir le résultat final.
->- L'application doit comporter au moins 2 pages, une page de login et une page de course
->- La page de login doit comporter un formulaire de connexion avec un champ username et un champ password
->- La page de course doit comporter un formulaire de création de course avec un champ name et un champ location
->- La page de course doit comporter une liste de course avec un bouton pour supprimer une course
->- La page de course doit comporter un bouton pour se déconnecter
->- Vous devez utiliser le service de gestion des courses pour récupérer la liste des courses et supprimer une course
->- Vous devez utiliser le service de gestion des utilisateurs pour vous connecter et vous déconnecter
->- Vous devez utiliser le service de gestion des utilisateurs pour vérifier que l'utilisateur est connecté avant d'afficher la page de course
->- Vous devez utiliser le service de gestion des utilisateurs pour vérifier que l'utilisateur est connecté avant de supprimer une course
->- Vous devez utiliser le service de gestion des utilisateurs pour vérifier que l'utilisateur est connecté avant de se déconnecter
->- Vous devez utiliser le service de gestion des utilisateurs pour vérifier que l'utilisateur est connecté avant de créer une course
->- Vous devez utiliser le service de gestion des utilisateurs pour vérifier que l'utilisateur est connecté avant d'afficher la page de login
+## Présentation du projet
+Une application web simple permettant de gérer des courses de poney.
+On peut se connecter, consulter, ajouter, modifier et supprimer des courses.
+
+## Contenu du projet
+
+**Le projet contient :**
+- Une page landing page
+- Une page de connexion
+- Une page dashboard
+  - Contient les 3 prochaines courses
+- Une page des courses
+  - Contient les courses
+  - Contient les informations de la course
+  - Inscription d'une course
+  - Modification d'une course
+  - Suppression d'une course
+
+## Configuration du projet
+
+### Installation
+```bash
+$ npm install
+```
+
+### Lancement de l'application
+```bash
+$ ng serve
+```
+
+### Lancement des tests Cypress
+```bash
+$ ng e2e
+```
