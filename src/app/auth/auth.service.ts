@@ -32,6 +32,8 @@ export class AuthService {
       this.saveToken('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoicG9ueS5yYWNlckB0ZXN0LmNvbSIsInBhc3N3b3JkIjoxMjM0NTZ9.8p5j6ZJ0DlXkPpRcNmX1NQ65iQnwBoLphIQw9uwBQ88')
       //navigate to dashboard
       this.router.navigate(['dashboard']);
+    } else {
+      alert('Invalid email or password');
     }
   }
 }

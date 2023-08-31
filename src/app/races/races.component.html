@@ -2,7 +2,7 @@
 <main class="mt-16 py-3 px-5 flex flex-col gap-3">
   <h1 class="text-3xl font-bold">Liste des courses</h1>
   <div class="grid lg:grid-cols-2 gap-5">
-    <div class="w-full overflow-y-auto">
+    <div class="w-full overflow-y-auto max-h-[345px]">
       <div *ngIf="getRaces().length" class="flex flex-col gap-3">
         <div *ngFor="let race of getRaces(); let index = index"
              class="rounded border shadow grid grid-cols-2 py-3 px-4 cursor-pointer"
@@ -29,7 +29,7 @@
                   class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
                   (click)="deleteRace()">Supprimer
                 </button>
-                <button class="border rounded-lg p-1" (click)="nullRaceDetail()">
+                <button class="border rounded-lg p-1" id="close" (click)="nullRaceDetail()">
                   <svg width=24 height=24 class={color} viewBox="0 0 24 24" fill="none"
                        xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 18L18 6M6 6L18 18" stroke="#6B7280" stroke-width="2" stroke-linecap="round"
@@ -65,10 +65,8 @@
               <div *ngIf="raceDetail.ponies.length">
                 <div *ngFor="let ponies of raceDetail.ponies">
                   <div class="flex gap-1">
-                    <div class="my-auto">{{ponies.name | CustomCapitalize}}</div>
-                    <div *ngIf="ponies.winner" class="my-auto rounded-full bg-blue-700 text-white py-1 px-2 text-sm">
-                      Gagnant
-                    </div>
+                    <div *ngIf="ponies.winner" appCustomWinner class="my-auto">{{ponies.name | CustomCapitalize}}</div>
+                    <div *ngIf="!ponies.winner" class="my-auto">{{ponies.name | CustomCapitalize}}</div>
                   </div>
                 </div>
               </div>

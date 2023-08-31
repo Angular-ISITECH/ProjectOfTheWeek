@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
 import { RacesComponent } from './races/races.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {AuthService} from "./auth/auth.service";
@@ -16,19 +15,20 @@ import { NavbarComponent } from './navbar/navbar.component';
 import {CustomCapitalize} from "./pipes/custom-capitalize.pipe";
 import {CustomDateText} from "./pipes/custom-date-text.pipe";
 import {CustomDate} from "./pipes/custom-date.pipe";
+import { CustomWinnerDirective } from './directives/custom-winner.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     LoginComponent,
-    RegisterComponent,
     RacesComponent,
     DashboardComponent,
     NavbarComponent,
     CustomCapitalize,
     CustomDateText,
     CustomDate,
+    CustomWinnerDirective,
   ],
   imports: [
     BrowserModule,

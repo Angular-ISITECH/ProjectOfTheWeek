@@ -1,5 +1,6 @@
 <div class="flex items-center justify-center h-screen">
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-5 mx-auto my-auto w-full max-w-[300px] p-5">
+  <app-navbar></app-navbar>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-5 m-auto w-full max-w-[300px] p-5">
     <div class="text-3xl text-center">Connexion</div>
     <div class="">
       <label>

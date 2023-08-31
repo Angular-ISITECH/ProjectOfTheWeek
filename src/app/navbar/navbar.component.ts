@@ -9,6 +9,8 @@ import {AuthService} from "../auth/auth.service";
 })
 export class NavbarComponent {
   currentPage: string = '';
+  isConnected: boolean = false;
+  isNavBarOpen: boolean = false;
 
   constructor(private readonly router: Router, private readonly auth: AuthService) { }
 
@@ -21,5 +23,14 @@ export class NavbarComponent {
     const currentUrl = this.router.url;
     if (currentUrl.includes('dashboard')) this.currentPage = 'dashboard';
     else if (currentUrl.includes('races')) this.currentPage = 'races';
+    else if (currentUrl.includes('login')) this.currentPage = 'login';
+    else this.currentPage = '';
+
+    //detect if user is connected
+    this.isConnected = this.auth.isAuthenticated();
+  }
+
+  toggleNavbar() {
+    this.isNavBarOpen = !this.isNavBarOpen;
   }
 }
